@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    var currentValue:Int = 50
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -16,10 +18,11 @@ class ViewController: UIViewController {
     }
     
     @IBAction func showlert() {
-//        print("Hello!")
+        
+        let message = "Slider Value: \(currentValue)"
         
 //        this is the alert prompt
-        let alert = UIAlertController(title: "Hello World!", message: "This is my first app", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Hello World!", message: message, preferredStyle: .alert)
         
 //        this is the action for when an alert prompt is shown
         let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
@@ -30,6 +33,13 @@ class ViewController: UIViewController {
         alert.addAction(action2)
         
         present(alert, animated: true, completion: nil)
+    }
+    
+    @IBAction func sliderMoved(_ slider: UISlider) {
+        let roundedValue = slider.value.rounded()
+//        value is float as a default and need Int() to change to from Float to Int dataType
+        currentValue = Int(roundedValue)
+        
     }
  
 
