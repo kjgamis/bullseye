@@ -15,7 +15,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func showHitMeAlert() {
+    @IBAction func showlert() {
 //        print("Hello!")
         
 //        this is the alert prompt
@@ -30,17 +30,6 @@ class ViewController: UIViewController {
         alert.addAction(action2)
         
         present(alert, animated: true, completion: nil)
-    }
-    
-    @IBAction func showKnockKnockAlert() {
-        let alert = UIAlertController(title: "Knock Knock", message: "Who's there?", preferredStyle: .actionSheet)
-        
-        let action = UIAlertAction(title: "Just ME", style: .destructive, handler: nil)
-        
-        alert.addAction(action)
-        
-        present(alert, animated: true, completion: nil)
-        
     }
  
 
