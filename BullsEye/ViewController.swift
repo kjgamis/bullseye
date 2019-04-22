@@ -10,11 +10,16 @@ import UIKit
 
 class ViewController: UIViewController {
     
-    var currentValue:Int = 50
+    var currentValue:Int = 0
 
+    @IBOutlet weak var slider: UISlider!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        let roundedValue = slider.value.rounded()
+//        value is float as a default and need Int() to change to from Float to Int dataType
+        currentValue = Int(roundedValue)
     }
     
     @IBAction func showlert() {
