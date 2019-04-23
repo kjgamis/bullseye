@@ -35,13 +35,30 @@ class ViewController: UIViewController {
         
         let difference = abs(targetValue-currentValue)
         //        more points if closer (difference is smaller)
-        let points = 100 - difference
+        var points = 100 - difference
         score += points
+        
+        let title:String
+        
+        if difference == 0 {
+            title = "Perfect!"
+            points += 100
+        } else if difference < 5 {
+            title = "Very close!"
+            if difference == 1{
+                points += 50
+            }
+        } else if difference < 10 {
+            title = "Still pretty good!"
+        } else {
+            title = "Not even close..."
+        }
         
         let message = "You scored \(points) points"
         
+        
 //        this is the alert prompt
-        let alert = UIAlertController(title: "Hello World!", message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
 //        this is the action for when an alert prompt is shown
         let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
