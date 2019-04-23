@@ -28,8 +28,17 @@ class ViewController: UIViewController {
     
     @IBAction func showlert() {
         
+        var difference:Int
+        
+        difference = targetValue - currentValue
+        
+        if difference < 0 {
+            difference *= -1
+        }
+        
         let message = "Slider Value: \(currentValue)" +
-        "\nTarget Value: \(targetValue)"
+        "\nTarget Value: \(targetValue)" +
+        "\nDifference: \(difference)"
         
 //        this is the alert prompt
         let alert = UIAlertController(title: "Hello World!", message: message, preferredStyle: .alert)
