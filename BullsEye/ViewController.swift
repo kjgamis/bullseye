@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         print("Rounded Value: \(roundedValue)")
 //        value is float as a default and need Int() to change to from Float to Int dataType
         currentValue = Int(roundedValue)
-        startNewRound()
+        startNewGame()
     }
     
     @IBAction func showlert() {
@@ -98,6 +98,11 @@ class ViewController: UIViewController {
         roundLabel.text = String(round)
     }
  
-
+    @IBAction func startNewGame() {
+        round = 0
+        score = 0
+        
+        startNewRound()
+    }
 }
 
