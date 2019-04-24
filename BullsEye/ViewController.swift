@@ -28,7 +28,7 @@ class ViewController: UIViewController {
         print("Rounded Value: \(roundedValue)")
 //        value is float as a default and need Int() to change to from Float to Int dataType
         currentValue = Int(roundedValue)
-        startNewRound()
+        startNewGame()
     }
     
     @IBAction func showlert() {
@@ -61,15 +61,17 @@ class ViewController: UIViewController {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         
 //        this is the action for when an alert prompt is shown
-        let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
+//        handler tells the alert what should happen  after the button is pressed - this is the alert dismissed event
+//        handler is not executed right away. It is stored somewhere and is only executed when the AlertAction is tapped
+        let action = UIAlertAction(title: "Awesome", style: .default, handler: {
+            action in
+            self.startNewRound()
+        })
         
 //        tells the alert (controller) to add the button to itself
         alert.addAction(action)
         
         present(alert, animated: true, completion: nil)
-        
-//        after show alert, start new round
-        startNewRound()
         
     }
     
@@ -96,6 +98,11 @@ class ViewController: UIViewController {
         roundLabel.text = String(round)
     }
  
-
+    @IBAction func startNewGame() {
+        round = 0
+        score = 0
+        
+        startNewRound()
+    }
 }
 
