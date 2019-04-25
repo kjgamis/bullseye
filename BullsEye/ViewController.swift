@@ -36,6 +36,23 @@ class ViewController: UIViewController {
         
         slider.setThumbImage(thumbImageNormal, for: .normal)
         slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+//        left and right track images - don't want to to stretch at top/botton & don't mind stretching until left/right 14 points
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+//        minimum and maximum value images
+        let trackImageLeft = #imageLiteral(resourceName: "SliderTrackLeft")
+        let trackLeftResizable = trackImageLeft.resizableImage(withCapInsets: insets)
+        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        
+        let trackImageRight = #imageLiteral(resourceName: "SliderTrackRight")
+        let trackRightResizable = trackImageRight.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
+        
+        
+        
+        
+        
     }
     
     @IBAction func showlert() {
