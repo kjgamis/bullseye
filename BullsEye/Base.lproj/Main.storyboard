@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina4_7" orientation="landscape">
+    <device id="retina5_5" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,33 +15,21 @@
             <objects>
                 <viewController id="eVG-jx-I1J" customClass="AboutViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="itw-e2-zyj">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="7FP-TT-FNf">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atD-Wc-R30">
-                                <rect key="frame" x="547" y="318" width="100" height="37"/>
-                                <size key="titleShadowOffset" width="0.0" height="1"/>
-                                <state key="normal" title="KJG" backgroundImage="Button-Normal">
-                                    <color key="titleColor" red="0.37647058820000001" green="0.1176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    <color key="titleShadowColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <state key="highlighted" backgroundImage="Button-Highlighted"/>
-                                <connections>
-                                    <segue destination="iwh-4l-z34" kind="presentation" modalTransitionStyle="partialCurl" id="apZ-fa-FcB"/>
-                                </connections>
-                            </button>
-                            <wkWebView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-9f-g3Q">
-                                <rect key="frame" x="20" y="20" width="587" height="290"/>
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Pps-9f-g3Q">
+                                <rect key="frame" x="20" y="20" width="644" height="317"/>
                                 <wkWebViewConfiguration key="configuration">
                                     <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
                                     <wkPreferences key="preferences"/>
                                 </wkWebViewConfiguration>
                             </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dJh-Pu-3Mr">
-                                <rect key="frame" x="615" y="20" width="32" height="32"/>
+                                <rect key="frame" x="684" y="20" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="cme-Yv-fj9"/>
                                     <constraint firstAttribute="height" constant="32" id="dA3-R8-TqS"/>
@@ -54,20 +42,30 @@
                                     <action selector="close" destination="eVG-jx-I1J" eventType="touchUpInside" id="EDZ-bm-xfa"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="atD-Wc-R30">
+                                <rect key="frame" x="616" y="357" width="100" height="37"/>
+                                <size key="titleShadowOffset" width="0.0" height="1"/>
+                                <state key="normal" title="KJG" backgroundImage="Button-Normal">
+                                    <color key="titleColor" red="0.37647058820000001" green="0.1176470588" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleShadowColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <state key="highlighted" backgroundImage="Button-Highlighted"/>
+                                <connections>
+                                    <segue destination="iwh-4l-z34" kind="presentation" modalTransitionStyle="partialCurl" id="apZ-fa-FcB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="7FP-TT-FNf" secondAttribute="bottom" id="2xZ-l3-Kfe"/>
                             <constraint firstItem="7FP-TT-FNf" firstAttribute="leading" secondItem="HpN-8U-EUn" secondAttribute="leading" id="7Ux-Q4-1RW"/>
+                            <constraint firstItem="dJh-Pu-3Mr" firstAttribute="leading" secondItem="Pps-9f-g3Q" secondAttribute="trailing" constant="20" id="ELR-A8-io8"/>
+                            <constraint firstItem="atD-Wc-R30" firstAttribute="top" secondItem="Pps-9f-g3Q" secondAttribute="bottom" constant="20" id="Gdn-3o-Mfm"/>
                             <constraint firstItem="dJh-Pu-3Mr" firstAttribute="top" secondItem="HpN-8U-EUn" secondAttribute="top" constant="20" id="M3t-2f-Rh8"/>
                             <constraint firstItem="7FP-TT-FNf" firstAttribute="trailing" secondItem="HpN-8U-EUn" secondAttribute="trailing" id="OGe-rI-pPM"/>
-                            <constraint firstItem="Pps-9f-g3Q" firstAttribute="centerX" secondItem="itw-e2-zyj" secondAttribute="centerX" id="PHg-yj-Yq4"/>
                             <constraint firstItem="HpN-8U-EUn" firstAttribute="trailing" secondItem="dJh-Pu-3Mr" secondAttribute="trailing" constant="20" id="WHd-hM-wpH"/>
-                            <constraint firstItem="Pps-9f-g3Q" firstAttribute="centerY" secondItem="itw-e2-zyj" secondAttribute="centerY" id="ZNc-0p-oRt"/>
-                            <constraint firstItem="Pps-9f-g3Q" firstAttribute="centerX" secondItem="itw-e2-zyj" secondAttribute="centerX" id="efK-tw-gqn"/>
                             <constraint firstItem="HpN-8U-EUn" firstAttribute="trailing" secondItem="atD-Wc-R30" secondAttribute="trailing" constant="20" id="f0b-wM-Eop"/>
                             <constraint firstItem="Pps-9f-g3Q" firstAttribute="top" secondItem="HpN-8U-EUn" secondAttribute="top" constant="20" id="j1i-rO-hWb"/>
-                            <constraint firstItem="Pps-9f-g3Q" firstAttribute="centerY" secondItem="itw-e2-zyj" secondAttribute="centerY" id="k61-xu-EWI"/>
                             <constraint firstItem="Pps-9f-g3Q" firstAttribute="leading" secondItem="HpN-8U-EUn" secondAttribute="leading" constant="20" id="lVv-cp-MgQ"/>
                             <constraint firstItem="HpN-8U-EUn" firstAttribute="bottom" secondItem="atD-Wc-R30" secondAttribute="bottom" constant="20" id="uAg-o6-Iei"/>
                             <constraint firstItem="7FP-TT-FNf" firstAttribute="top" secondItem="HpN-8U-EUn" secondAttribute="top" id="xOd-84-AaL"/>
@@ -87,11 +85,11 @@
             <objects>
                 <viewController id="iwh-4l-z34" customClass="CreatorViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="4eK-Z6-jBS">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="xo2-Mp-p1A">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdf-sz-BzP">
                                 <rect key="frame" x="20" y="20" width="49" height="40"/>
@@ -104,7 +102,7 @@
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eoE-Lp-B4Y">
-                                <rect key="frame" x="109" y="100" width="449" height="127"/>
+                                <rect key="frame" x="143.66666666666663" y="100" width="449" height="127"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="17l-0e-CgI">
                                         <rect key="frame" x="20" y="67" width="382" height="40"/>
@@ -157,14 +155,14 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="BullsEye" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="it6-bd-HmZ">
-                                <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                                <rect key="frame" x="0.0" y="0.0" width="736" height="414"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JuP-kE-8b0">
-                                <rect key="frame" x="26.5" y="23" width="614" height="329"/>
+                                <rect key="frame" x="61" y="42.666666666666657" width="614" height="329"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Put the Bull's Eye as close as you can to:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KY3-35-q83">
                                         <rect key="frame" x="88" y="28" width="310" height="21"/>
