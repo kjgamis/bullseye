@@ -29,6 +29,13 @@ class ViewController: UIViewController {
 //        value is float as a default and need Int() to change to from Float to Int dataType
         currentValue = Int(roundedValue)
         startNewGame()
+        
+//        slider thumb images
+        let thumbImageNormal = #imageLiteral(resourceName: "SliderThumb-Normal")
+        let thumbImageHighlighted = #imageLiteral(resourceName: "SliderThumb-Highlighted")
+        
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
     }
     
     @IBAction func showlert() {
